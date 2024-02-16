@@ -21,4 +21,3 @@ for n in range(10, 101, 10):
     arr = generate_random_list(n)
     sorted_arr, comparisons, swaps = bubble_sort(arr)
     print(f"For n = {n}, number of comparisons: {comparisons}, number of swaps: {swaps}")
-    
