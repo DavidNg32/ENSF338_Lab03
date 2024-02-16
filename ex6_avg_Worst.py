@@ -38,9 +38,9 @@ def quickBinary(arr, target):
 
 
 def measureMeWorst(search_function, input_size, num_trials=10):
-    arr = np.arange(input_size)  
-    arr = np.flip(arr)  
-    target_list = np.random.choice(arr, 100)  
+    arr = np.arange(input_size)  # Generate a sorted array
+    target_list = np.random.choice(arr, 100)
+
     total_time = 0
     for target in target_list:
         for _ in range(num_trials):
@@ -55,7 +55,7 @@ def measureMeWorst(search_function, input_size, num_trials=10):
         print(f"Avg. time to find targets using {search_function.__name__} with input size {input_size}: {average_time:.10f} seconds")
     else:
         print(f"Targets not found. Avg. time: {average_time:.10f} seconds")
-    
+
     return average_time
 
 
